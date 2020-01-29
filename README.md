@@ -1,3 +1,12 @@
+FORK
+====
+
+Official repository doesn't have updates, so I merge the PR
+
+ PHP 7.4 Support - [#429](https://github.com/CopernicaMarketingSoftware/PHP-CPP/pull/429)
+ 
+ CMakeLists.txt fix - [#427](https://github.com/CopernicaMarketingSoftware/PHP-CPP/pull/427)
+
 PHP-CPP
 =======
 
