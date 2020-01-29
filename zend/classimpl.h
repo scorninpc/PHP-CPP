@@ -13,6 +13,13 @@
  */
 namespace Php {
 
+
+#if PHP_VERSION_ID >= 70400
+    #define PHP_WRITE_PROP_HANDLER_TYPE zval *
+#else
+    #define PHP_WRITE_PROP_HANDLER_TYPE void
+#endif
+
 /**
  *  Class definition
  */
@@ -259,7 +266,7 @@ public:
      *  @param  cache_slot      The cache slot used
      *  @return zval
      */
-    static void writeProperty(zval *object, zval *name, zval *value, void **cache_slot);
+    static PHP_WRITE_PROP_HANDLER_TYPE writeProperty(zval *object, zval *name, zval *value, void **cache_slot);
 
     /**
      *  Function that is called to check whether a certain property is set
